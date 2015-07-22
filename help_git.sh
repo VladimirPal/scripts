@@ -1,3 +1,6 @@
+# отменить локальные коммиты, но сохранить все локальные изменения
+git reset HEAD^
+
 # удалить ветку локально\удаленно
 git branch -d <branch-name>
 git push origin :<branch-name>
