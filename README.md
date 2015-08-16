@@ -1,2 +1,0 @@
-# scripts
-deploy scripts
