@@ -5,11 +5,10 @@ git push origin :<branch-name>
 # remove files:
 git rm $(git ls-files --deleted)
  
-# show remote branches:
-git branch -a
- 
-# Загрузить ветку локально:
-git checkout -b test remote-name/test
+# Загрузить ветку локально c тем же названием:
+git branch -r
+git fetch origin
+git checkout -b BRANCH origin/BRANCH
  
 # Внести изменения в ветку отличную по названию:
 git push origin test:remote-name
