@@ -1,4 +1,3 @@
-
 # pip completion
 _pip_completion()
 {
@@ -23,21 +22,30 @@ mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
+
 # django aliases
 alias p='python manage.py shell'
 alias rs='python manage.py runserver'
 alias cs='python manage.py collectstatic'
 alias m="python manage.py"
 
+#projects aliases
 alias smart='workon smart'
 alias fs='workon fs'
 
 # git alias
+
+function current_branch() {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1 /'
+}
+
 alias gr='git rm $(git ls-files --deleted)'
 alias ga='git add .'
 alias gs='git status'
 alias gd='git diff'
-alias gp='git push'
+alias gb='git branch'
+alias gp='git push origin $(current_branch)'
+alias gcm='git commit -m'
 
 export DJANGO_CONF=dev
 export UNO_PATH=/usr/lib/libreoffice/program
