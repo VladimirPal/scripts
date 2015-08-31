@@ -4,6 +4,7 @@
 #
 NAME=$(git branch | grep '*' | sed 's/* //') 
 
+echo "$1"
 if [ "$NAME" = 'master' ] 
 then
   #
