@@ -6,4 +6,6 @@ NAME=$(git branch | grep '*' | sed 's/* //')
 if [ "$NAME" != "master" ]
 then
     echo "$NAME"': '$(cat "$1") > "$1"
+else
+    echo "fail"': '$(cat "$1") > "$1"
 fi
