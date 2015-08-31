@@ -21,11 +21,9 @@
 #
 # Automatically adds branch name and branch description to every commit message.
 #
-NAME=$(git branch | grep '*' | sed 's/* //')
+NAME=$(git branch | grep '*' | sed 's/* //') 
 
-if [ "$NAME" != 'master' ]
+if [ "$NAME" != 'master' ] 
 then
   echo "$NAME"': '$(cat "$1") > "$1"
-else
-  #
 fi
