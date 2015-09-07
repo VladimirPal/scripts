@@ -44,6 +44,7 @@ alias ga='git add .'
 alias gs='git status'
 alias gd='git diff'
 alias gb='git branch'
+alias gam='git commit --amend'
 alias gp='git push origin $(current_branch)'
 alias gcm='git commit -m'
 
