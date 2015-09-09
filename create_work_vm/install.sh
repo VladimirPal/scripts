@@ -1,5 +1,4 @@
-sudo apt-get install npm libcurl4-openssl-dev libmysqlclient-dev python-pip python-dev python-all-dev
-build-essential libjpeg-dev
+sudo apt-get install npm libcurl4-openssl-dev libmysqlclient-dev python-pip python-dev python-all-dev build-essential libjpeg-dev git gitk vim libcurl4-openssl-dev libmysqlclient-dev python-pip python-dev python-all-dev build-essential libjpeg-dev redis-server python-software-properties
 
 sudo pip install pip --upgrade
 sudo /usr/local/bin/pip2.7 install virtualenv virtualenvwrapper pip-tools
