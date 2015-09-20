@@ -1,3 +1,5 @@
+# для проектов с большим количеством пользовательских коннектов (обращений к fs)
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 # создать файл
 touch file
 # Пример команды для дампа rtmp
@@ -10,17 +12,15 @@ sudo adduser username group-name
 dd if=/dev/zero of=file.name bs=1024M count=1
 # текстовый поиск
 grep -rnw /target/catalog -e search_pattern
- 
-dpkg-reconfigure tzdata # Changing the timezone of your Debian system
+# Changing the timezone of your Debian system
+dpkg-reconfigure tzdata
 date --set 2013-11-11 # set date
 date --set 21:01:15 # set time
 sudo netstat -tap | grep mysql # see active connection
- 
 #-------------------------------------------------SSH--------------------------------------------------------------
- 
 # скопировать файл по ssh
 scp name@host:~/dump.sql /home/name/
-scp path/myfile user@8.8.8.8:/full/path/to/new/location/ 
- 
+scp path/myfile user@8.8.8.8:/full/path/to/new/location/
+
 # add public key
 cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'
