@@ -41,12 +41,15 @@ function current_branch() {
 
 alias gr='git rm $(git ls-files --deleted)'
 alias ga='git add .'
+alias gl='git log'
 alias gs='git status'
 alias gd='git diff'
 alias gb='git branch'
 alias gam='git commit --amend'
 alias gp='git push origin $(current_branch)'
+alias gpl='git pull origin $(current_branch)'
 alias gcm='git commit -m'
+alias gch='git checkout '
 
 export DJANGO_CONF=dev
 export UNO_PATH=/usr/lib/libreoffice/program
