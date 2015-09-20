@@ -17,24 +17,23 @@ _fab_completion()
 }
 complete -F _fab_completion fab
 
+# Виртуальное окружение python
 export WORKON_HOME=~/Envs
 mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
-
 # django aliases
-alias p='python manage.py shell'
-alias rs='python manage.py runserver'
+alias p='python app.py shell'
+alias rs='python app.py runserver'
 alias cs='python manage.py collectstatic'
 alias m="python manage.py"
 
 #projects aliases
-alias smart='workon smart'
+alias sm='workon smart'
 alias fs='workon fs'
 
-# git alias
-
+# git aliases
 function current_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1 /'
 }
@@ -53,6 +52,5 @@ alias gch='git checkout '
 
 export DJANGO_CONF=dev
 export UNO_PATH=/usr/lib/libreoffice/program
-
-
 export SMARTPOST_SETTINGS=~/Envs/smart/src/settings/omjan.py
+export PATH="$PATH:$HOME/npm-global/bin"
