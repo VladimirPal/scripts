@@ -43,3 +43,11 @@ sorted(student_objects, key=attrgetter('age'))
 messages = ['critical!!!', 'hurry!', 'standby', 'immediate!!']
 sorted(messages, key=methodcaller('count', '!'))
 ['standby', 'hurry!', 'immediate!!', 'critical!!!']
+
+
+
+# flask static serve
+if app.config.get('DEBUG'):
+    from flask import Blueprint
+    assets = Blueprint(app.config.get('STATIC_URL'), 'assets', static_folder=app.config.get('STATIC_ROOT'))
+    app.register_blueprint(assets)
