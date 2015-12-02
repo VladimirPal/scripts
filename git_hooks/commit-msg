@@ -7,5 +7,5 @@ NAME=$(git branch | grep '*' | sed 's/* //')
 
 if [ "$NAME" != 'master' ] 
 then
-  echo "$NAME"': '$(cat "$1") > "$1"
+  echo "https://trello.com/c/$NAME/"': '$(cat "$1") > "$1"
 fi
