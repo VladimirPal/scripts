@@ -26,3 +26,6 @@ git checkout experiment
 git rebase master
 git checkout master
 git merge experiment
+
+# ignore file only local
+git update-index --assume-unchanged [<file>...]
